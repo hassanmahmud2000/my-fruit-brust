@@ -10,24 +10,24 @@
 </head>
 <body>
     <!-- Nav Bar -->
-        <nav class="bg-[#F85559] navbar rounded-full mt-4 w-[1440px]">
-            <div class="">
-                <ul class="flex space-x-6 pl-12 text-white">
+        <nav class="bg-[#F85559] navbar rounded-full mt-4 w-[380px] h-[80px] lg:w-[1440px]">
+            <div>
+                <ul class="hidden lg:flex space-x-6 pl-12 text-white">
                     <li><a href="">Home</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Shop</a></li>
                     <li><a href="">All Fruits</a></li>
                 </ul>
             </div>
-            <div class="flex-1 pl-56 ">
+            <div class="flex-1 items-start  lg:pl-56 ">
               <img src="images/logo.png" alt="">
-              <h1 class="text-3xl font-bold pl-3 text-white">Fruit Burst</h1>
+              <h1 class="text-xl mt-4 lg:text-3xl font-bold pl-3 text-white">Fruit Burst</h1>
             </div>
-            <div class="flex-none gap-2 ">
+            <div class="flex-none lg:gap-2">
               <div class="form-control pr-12 relative">
                 <input type="text" placeholder="Search here"class="input input-bordered w-24 md:w-auto rounded-full"/>
               </div>
-             <div class=" absolute z-10 pl-44">
+             <div class=" absolute z-10 pl-30 md:pl-44">
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                   </svg>
@@ -37,14 +37,14 @@
         </nav>
         <!-- Header Photos -->
     <header class="">
-      <div class="carousel w-[1440px] h-[600px] mt-12">
+      <div class="carousel mx-auto w-[380px] h-[250px] md:w-[1440px] md:h-[600px] mt-12">
         <div id="slide1" class="carousel-item relative w-full">
           <div class="hero" style="background-image: url(./images/banner1.png);">
             <div class="hero-overlay bg-opacity-30"></div>
             <div class="hero-content text-center text-neutral-content">
               <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
-                <p class="mb-5 text-xl font-medium">We supply highly quality organic products</p>
+                <h1 class="mb-3 md:mb-5 text-4 md:text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
+                <p class="mb-3 md:mb-5 md:text-xl font-medium">We supply highly quality organic products</p>
                 <button class="btn btn-error text-white ">Shop Now</button>
               </div>
             </div>
@@ -102,12 +102,12 @@
       </div>
     </header>
     <main>
-        <section class="pt-16 flex">
-              <div class="flex-1 pl-20">
-                  <h1 class="text-5xl font-extrabold">Deal of the day</h1>
+        <section class="pt-16 flex sd:flex-col ">
+              <div class="flex-1 text-center m-3 md:pl-20">
+                  <h1 class="text-4xl md:text-5xl font-extrabold">Deal of the day</h1>
                   <p class="text-base font-medium">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
               </div>
-                <div class="grid grid-flow-col gap-5 text-center auto-cols-max flex-1 pl-80">
+                <div class="grid md:grid-flow-col gap-5 text-center md:auto-cols-max md:flex-1 md:pl-80">
                   <div class="flex flex-col">
                     <span class="countdown font-mono text-5xl">
                       <span style="--value:15;"></span>
@@ -151,10 +151,23 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
-                <a class="text-[#F85559]" href="">Details</a>
+                <!-- Open the modal using ID.showModal() method -->
+                  <button class="btn btn-outline btn-error" onclick="my_modal_5.showModal()">Details</button>
+                  <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                      <form method="dialog" class="modal-box bg-white">
+                      <img class="items-center pl-40" src="images/fruit6.png" alt="">
+                      <h1 class="text-[40px] font-extrabold">Red Apple</h1>
+                      <p class="text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                      <div class="modal-action flex-1">
+                           <!-- if there is a button in form, it will close the modal -->
+                       <button class="btn btn-outline btn-error">Close</button>
+                       <button class="btn btn-outline btn-error">Buy Now</button>
+                      </div>
+                     </form>
+                  </dialog>
               </div>
-            </div>
-            <!-- Card 01 -->
+            </div>  
+            <!-- Card 02 -->
             <div class="card w-96 bg-base-100 shadow-xl mt-12">
               <figure class="px-10 pt-10">
                 <img src="images/fruit7.png" alt="Shoes" class="rounded-xl" />
@@ -169,10 +182,23 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
-                <a class="text-[#F85559]" href="">Details</a>
+               <!-- Open the modal using ID.showModal() method -->
+                      <button class="btn btn-outline btn-error" onclick="my_modal_1.showModal()">Details</button>
+                      <dialog id="my_modal_1" class="modal">
+                      <form method="dialog" class="modal-box">
+                        <img class="items-center pl-40" src="images/fruit7.png" alt="">
+                        <h1 class="text-[40px] font-extrabold">Orange</h1>
+                        <p class="text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                       <div class="modal-action">
+                       <!-- if there is a button in form, it will close the modal -->
+                       <button class="btn btn-outline btn-error">Close</button>
+                       <button class="btn btn-outline btn-error">Buy Now</button>
+                    </div>
+                </form>
+                </dialog>
               </div>
             </div>
-            <!-- Card 01 -->
+            <!-- Card 03 -->
             <div class="card w-96 bg-base-100 shadow-xl mt-12">
               <figure class="px-10 pt-10">
                 <img src="images/fruit8.png" alt="Shoes" class="rounded-xl" />
@@ -187,10 +213,24 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
-                <a class="text-[#F85559]" href="">Details</a>
+                <!-- Open the modal using ID.showModal() method -->
+                <button class="btn btn-outline btn-error" onclick="my_modal_2.showModal()">Details</button>
+                <dialog id="my_modal_2" class="modal">
+                <form method="dialog" class="modal-box">
+                  <img class="items-center pl-40" src="images/fruit8.png" alt="">
+                  <h1 class="text-[40px] font-extrabold">Red Drangon</h1>
+                  <p class="text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+
+                  <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-outline btn-error">Close</button>
+                    <button class="btn btn-outline btn-error">Buy Now</button>
+                 </div>
+                </form>
+              </dialog>
               </div>
             </div>
-            <!-- Card 01 -->
+            <!-- Card 04 -->
             <div class="card w-96 bg-base-100 shadow-xl mt-12">
               <figure class="px-10 pt-10">
                 <img src="images/fruit9.png" alt="Shoes" class="rounded-xl" />
@@ -205,11 +245,24 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
-                <a class="text-[#F85559]" href="">Details</a>
+                <!-- You can open the modal using ID.showModal() method -->
+                  <button class="btn btn-outline btn-error" onclick="my_modal_3.showModal()">Details</button>
+                  <dialog id="my_modal_3" class="modal">
+                   <form method="dialog" class="modal-box">
+                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                     <img class="items-center pl-40" src="images/fruit9.png" alt="">
+                     <h1 class="text-[40px] font-extrabold">Banana</h1>
+                     <p class="text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                     <div class="modal-action">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn btn-outline btn-error">Close</button>
+                      <button class="btn btn-outline btn-error">Buy Now</button>
+                    </form>
+                  </dialog>
               </div>
             </div>
-            <div class="mx-[720px] mt-[50px]">
-              <button class="btn btn-error text-white ">Shop All</button>
+            <div class="mx-32 md:mx-[750px] mt-[50px]">
+              <button class="btn btn-error text-white w-32">Shop All</button>
             </div>
         </section>
         <!-- Meet the team section -->
@@ -217,19 +270,17 @@
           <div class="hero min-h-screen mt-[140px]" style="background-image: url(./images/banner1.png);">
             <div class="hero-overlay bg-opacity-70"></div>
             <div class="hero-content text-center pb-80 text-neutral-content">
-              <div class="max-w-md">
-                  <div>
-                      <div>
-                        <h1 class="text-5xl font-extrabold">Meet the team section</h1>
+              <div class="md:max-w-md">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-extrabold">Meet the team section</h1>
                         <p class="text-base font-medium">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                      </div>
-                  </div>
+                    </div>
               </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 pt-56 space-x-8">
               <!-- Team Member 01 -->
               <div class="text-center text-white">
-                <img src="images/member1.png" alt="">
+                <img class="pl-6" src="images/member1.png" alt="">
                 <h1 class="text-2xl font-bold">Awlad Hossain</h1>
                 <p class="text-base font-medium">Fruits Expert</p>
                   <div class="flex align-middle space-x-3 pl-12">
